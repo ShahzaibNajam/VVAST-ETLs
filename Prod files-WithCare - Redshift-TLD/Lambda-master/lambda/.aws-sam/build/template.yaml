@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'brightpearl_app
+
+  Sample SAM Template for Brightpearl api
+
+  '
+Globals:
+  Function:
+    Timeout: 900
+Resources:
+  BrightpearlAPIFnRedshiftTLDDev:
+    Type: AWS::Serverless::Function
+    Properties:
+      MemorySize: 512
+      CodeUri: BrightpearlAPIFnRedshiftTLDDev
+      Runtime: python3.8
+      FunctionName: brightpearl_api_fetch-redshift-troyleedesigns-dev
+      Handler: app.lambda_handler
+      Role: arn:aws:iam::773385736472:role/brightpearl-data-integration-BrightpearlAPIFnRole-GEFQ4QJTE8TZ
+      VpcConfig:
+        SecurityGroupIds:
+        - sg-0a63c0d2220be3f3a
+        SubnetIds:
+        - subnet-0d30672497d188301
