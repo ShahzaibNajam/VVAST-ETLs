@@ -1,0 +1,7 @@
+requests
+psycopg2-binary==2.8.6
+numpy==1.20.2
+greenlet==1.0.0
+pandas==1.2.4
+sqlalchemy-redshift
+ratelimit
